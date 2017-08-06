@@ -3,11 +3,13 @@ window.onload = function () {
         let p = Observe.prototype;
         p.walk = function (obj) {
             for (let key in obj) {
+            // 通过使用 hasOwnProperty 来判断是否含有该属性
                 if (obj.hasOwnProperty(key)) {
                     this.define(obj[key],key)
                     if (typeof obj[key] === 'object') {
                         new Observe(obj[key])
                     }
+                    //如果发现该属性是一个对象的话，使用递归的算法来执行
                 }
                 
             }
