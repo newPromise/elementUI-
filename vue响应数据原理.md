@@ -73,15 +73,15 @@ var myObj = {
 
 ```
 第二种方法：使用 defineProperty 方法：  
-Object.defineProperty(
-  myObj, // 表示目标对象
-  'a', // 表示要进行相应的属性
-  { // 应用 get set方法
-    get: function () {
-      return this.a;
-    },
-    set: function (newVal) {
-      return newVal;
+Object.defineProperty(  
+  myObj, // 表示目标对象  
+  'a', // 表示要进行相应的属性  
+  { // 应用 get set方法  
+    get: function () {  
+      return this.a;  
+    },  
+    set: function (newVal) { 
+      return newVal;  
     }
   }
 )
