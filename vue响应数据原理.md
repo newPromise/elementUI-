@@ -28,7 +28,8 @@ window.onload = function () {
                         console.log('我被设置了新的'+key);
                         console.log('这个新设置的属性值是'+newVal);
                         if (val === newVal) {
-                            val = newVal;
+                        //注意：这里使用的val是外界传入的数据，不可以使用 data[key]的形式被访问到，因为这会造成循环
+                            val = newVal;
                             return val;
                         } else {
                             return val;
