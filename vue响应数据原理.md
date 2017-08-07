@@ -1,3 +1,4 @@
+#### 1.实现vue数据响应的代码
 ```
 window.onload = function () {
         let p = Observe.prototype;
@@ -72,7 +73,8 @@ var myObj = {
 };
 
 ```
-第二种方法：使用 defineProperty 方法：  
+第二种方法：使用 defineProperty 方法：
+```
 Object.defineProperty(  
   myObj, // 表示目标对象  
   'a', // 表示要进行相应的属性  
@@ -85,4 +87,8 @@ Object.defineProperty(
     }
   }
 )
-    
+```
+#### 2.使用Vue实现数据驱动的原理图
+当vue中数据变化的时候触发视图更新，反过来，视图更新引起的数据变化也会相应要data数据中
+![数据驱动](http://shellming.com/img/vue-data-binding/2.png)
+
