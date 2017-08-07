@@ -89,6 +89,8 @@ Object.defineProperty(
 )
 ```
 #### 2.使用Vue实现数据驱动的原理图
-当vue中数据变化的时候触发视图更新，反过来，视图更新引起的数据变化也会相应要data数据中
+当vue中数据变化的时候触发视图更新，反过来，视图更新引起的数据变化也会相应要data数据中,下图是使用vue导致的数据驱动变化图
 ![数据驱动](http://shellming.com/img/vue-data-binding/2.png)
+使用 vue实例化的时候，会遍历传给data中的数据，将这些数据转化为getter 和 setter  
+每一个实例对象都有一个 watcher 实例对象，在渲染组件的时候将属性记录为依赖，当数据中的setter变化的时候，变化之后，会通知 watcher (观察者)重新计算，从而导致
 
