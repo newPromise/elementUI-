@@ -95,3 +95,6 @@ Object.defineProperty(
 使用 vue实例化的时候，会遍历传给data中的数据，将这些数据转化为getter 和 setter  
 每一个实例对象都有一个 watcher 实例对象，在渲染组件的时候将属性记录为依赖，当数据中的setter变化的时候，变化之后，会通知 watcher (观察者)重新计算，从而导致
 
+> vue tips>
+在实际上使用 vue 的时候要注意，一个页面上不能有两个路由对象，因为路由变化为 `active` 的路由只能有一个
+
