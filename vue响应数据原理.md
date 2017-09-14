@@ -98,3 +98,15 @@ Object.defineProperty(
 > vue tips>
 在实际上使用 vue 的时候要注意，一个页面上不能有两个路由对象，因为路由变化为 `active` 的路由只能有一个
 
+细心，耐心， 恒心
+
+> 在 vue 中获取dom 的时候，使用常规的方式获取到 dom 的时候, 要保证 dom 元素已经被获取到了
+
+```
+mounted () {
+  this.$nextTick (() => {
+        // 这里执行 dom 操作
+  })
+}
+```
+
